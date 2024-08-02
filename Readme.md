@@ -30,34 +30,6 @@ The solution involves:
 4. Assigning a race number and time based on registration and age.
 5. Handling edge cases where the runner is exactly 18 years old.
 
-### Code:
-```javascript
-// Generate a random race number between 0 and 999.
-let raceNumber = Math.floor(Math.random() * 1000);
-
-// Boolean variable indicating if the runner is registered early.
-let isRunnerRegisteredEarly = true;
-
-// Variable representing the age of the runner.
-let runnerAge = 19;
-
-// Check if the runner is an adult (age > 18) and is registered early.
-// If both conditions are true, add 1000 to the race number to differentiate early registrants.
-if (runnerAge > 18 && isRunnerRegisteredEarly) {
-  raceNumber += 1000;
-}
-
-// Check the runner's age and registration status to determine the race time.
-if (runnerAge > 18 && isRunnerRegisteredEarly) {
-  console.log(`Your race number is : ${raceNumber}. You will race at 9:30 am.`);
-} else if (runnerAge > 18 && !isRunnerRegisteredEarly) {
-  console.log(`Your race number is : ${raceNumber}. You will race at 11:00 am.`);
-} else if (runnerAge < 18) {
-  console.log(`Your race number is : ${raceNumber}. You will race at 12:30 pm.`);
-} else {
-  console.log('Please see the registration desk.');
-}
-```
 
 ## Challenges Faced
 1. **Handling Different Scenarios**: The main challenge was ensuring that the program correctly assigns race numbers and times based on multiple conditions (age and registration time).
